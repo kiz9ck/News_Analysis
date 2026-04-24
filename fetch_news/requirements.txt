@@ -1,0 +1,5 @@
+functions-framework==3.*
+feedparser==6.*
+httpx==0.27.*
+beautifulsoup4==4.*
+google-cloud-bigquery==3.*
