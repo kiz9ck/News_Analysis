@@ -21,7 +21,7 @@ An automated data engineering pipeline that aggregates cryptocurrency news from 
 
 ## Architecture & Tech Stack
 
-* **Language:** Python 3.14
+* **Language:** Python 
 * **Compute:** Google Cloud Functions (`functions-framework`)
 * **Storage:** Google BigQuery / Google Cloud Storage
 * **AI/ML:** Google Vertex AI (Gemini 2.5 Flash)

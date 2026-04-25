@@ -14,7 +14,7 @@ from google.cloud import bigquery
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-TABLE_ID = os.environ.get("BQ_TABLE_ID", "your-dataset.raw_news")
+TABLE_ID = os.environ["BQ_TABLE_ID"]
 LOOKBACK_HOURS = int(os.environ.get("LOOKBACK_HOURS", "1"))
 
 MIN_SUMMARY_LEN = 150

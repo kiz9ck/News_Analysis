@@ -21,22 +21,14 @@ logger = logging.getLogger(__name__)
 
 bq_client = bigquery.Client()
 
-PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "project-ID")
+PROJECT_ID = os.environ["GOOGLE_CLOUD_PROJECT"]
 LOCATION = os.environ.get("REGION", "europe-west1")
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
-BQ_NEWS_TABLE = os.environ.get(
-    "BQ_NEWS_TABLE", "project-ID.your-dataset.raw_news"
-)
-BQ_RESULTS_TABLE = os.environ.get(
-    "BQ_RESULTS_TABLE", "project-ID.your-dataset.analysis_results"
-)
-BQ_ERRORS_TABLE = os.environ.get(
-    "BQ_ERRORS_TABLE", "project-ID.your-dataset.analysis_errors"
-)
-BQ_PRICE_TABLE = os.environ.get(
-    "BQ_PRICE_TABLE", "project-ID.your-dataset.prices"
-)
+BQ_NEWS_TABLE = os.environ["BQ_NEWS_TABLE"]
+BQ_RESULTS_TABLE = os.environ["BQ_RESULTS_TABLE"]
+BQ_ERRORS_TABLE = os.environ["BQ_ERRORS_TABLE"]
+BQ_PRICE_TABLE = os.environ["BQ_PRICE_TABLE"]
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "50"))
 MAX_RETRIES = int(os.environ.get("MAX_RETRIES", "3"))
 LLM_CONCURRENCY = int(os.environ.get("LLM_CONCURRENCY", "10"))

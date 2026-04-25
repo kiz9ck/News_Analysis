@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-TABLE_ID = os.environ.get("BQ_TABLE_ID", "your-dataset.prices")
-COINGECKO_API_KEY = os.environ.get("COINGECKO_API_KEY", "")
+TABLE_ID = os.environ["BQ_TABLE_ID"]
+COINGECKO_API_KEY = os.environ["COINGECKO_API_KEY"]
 
 ASSETS = {
     "BTC": "bitcoin",
