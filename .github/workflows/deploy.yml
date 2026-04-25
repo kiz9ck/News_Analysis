@@ -30,9 +30,7 @@ jobs:
 
       - name: Lint code with flake8
         run: |
-          # Останавливаем билд, если есть синтаксические ошибки или неопределенные имена
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # Предупреждаем о слишком длинных строках и мелких недочетах (без остановки билда)
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Simulate GCP Deployment
